@@ -1,0 +1,10 @@
+.eachMovieBox * {
+    margin: 0;
+}
+.movieCardBox {
+    background-color: #90ee9067;
+    border-radius: 8px;
+    border: 1.5px solid silver;
+    padding: 8px;
+    margin: 8px;
+}

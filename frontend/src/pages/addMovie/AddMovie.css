@@ -1,0 +1,7 @@
+.addMovieFormContainer {
+    min-height: 85vh;
+}
+.addMovieFormContainer Form {
+    background-image: linear-gradient(to bottom,#0000ffb8,#add8e657);
+    padding: 18px;
+}

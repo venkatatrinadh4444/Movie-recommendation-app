@@ -1,0 +1,6 @@
+.formContainer {
+    min-height: 100vh;
+}
+.formContainerBox {
+    background-image: linear-gradient(to bottom,#000000cb,#c0c0c0d2);
+}

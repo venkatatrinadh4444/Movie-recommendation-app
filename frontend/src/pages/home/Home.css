@@ -1,0 +1,42 @@
+.movieCard {
+    width: 320px;
+    border: 1.5px solid #00800058;
+    background-image: linear-gradient(to bottom,#90ee9063,#80808033);
+}
+.movieImage {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+.comments {
+    border: 1.2px solid green;
+    border-radius: 4px;
+    padding: 4px;
+}
+.comments * {
+    margin: 0;
+}
+@media screen and (max-width:320px) {
+    .movieCard {
+        width: 280px;
+        margin-bottom: 16px !important;
+    }
+}
+@media (min-width:320px) and (max-width:576px) {
+    .movieCard {
+        width: 360px;
+        margin-bottom: 16px !important;
+    }
+}
+@media (min-width:576px) and (max-width:620px) {
+    .movieCard {
+        width: 220px;
+        margin-bottom: 16px !important;
+    }
+}
+@media (min-width:620px) and (max-width:768px) {
+    .movieCard {
+        width: 280px;
+        margin-bottom: 16px !important;
+    }
+}
