@@ -22,7 +22,7 @@ const Login = () => {
   }
 
   const registerUser=()=> {
-    axios.post('https://yournextmovie.onrender.com/auth/register-user',userDetails).then(res=>toast.success(res.data.msg)).catch(err=>toast.error(err))
+    axios.post('https://movie-recommendation-app-6rw6.onrender.com/auth/register-user',userDetails).then(res=>toast.success(res.data.msg)).catch(err=>toast.error(err))
     setUserDetails({
       username:'',
     email:'',
@@ -31,7 +31,7 @@ const Login = () => {
   }
   const loginUser=()=> {
     const {email,password}=userDetails
-    axios.post('https://yournextmovie.onrender.com/auth/login-user',{email,password}).then(res=>{
+    axios.post('https://movie-recommendation-app-6rw6.onrender.com/auth/login-user',{email,password}).then(res=>{
       localStorage.setItem('token',res.data.token)
       toast.success(res.data.msg)
     }).catch(err=>toast.error(err))

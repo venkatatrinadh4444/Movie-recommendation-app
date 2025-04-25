@@ -6,7 +6,6 @@
 .movieImage {
     width: 100%;
     height: 180px;
-    object-fit: cover;
 }
 .comments {
     border: 1.2px solid green;
@@ -16,6 +15,7 @@
 .comments * {
     margin: 0;
 }
+
 @media screen and (max-width:320px) {
     .movieCard {
         width: 280px;

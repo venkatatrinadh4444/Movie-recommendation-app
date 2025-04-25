@@ -5,7 +5,7 @@ import addImg from '../../assets/add-movie.png'
 import './Navbar.css';
 import {Link} from 'react-router-dom'
 const Navbar=()=> {
-    const token=localStorage.getItem('token')
+    
     return (
         <>
         <div className='d-none d-sm-block shadow mb-3 p-2'>

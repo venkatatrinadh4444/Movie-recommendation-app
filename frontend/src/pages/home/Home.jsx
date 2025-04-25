@@ -23,7 +23,7 @@ const Home = () => {
   const fetchingMovies = (pageValue) => {
     axios
       .get(
-        `https://yournextmovie.onrender.com/movies/all-movies?page=${pageValue}&limit=5`
+        `https://movie-recommendation-app-6rw6.onrender.com/movies/all-movies?page=${pageValue}&limit=5`
       )
       .then((res) => {
         setMovies(res.data.movies);
@@ -43,7 +43,7 @@ const Home = () => {
     setShowComments({ id: idValue})
     axios
       .get(
-        `https://yournextmovie.onrender.com/movies/fetching-comments/${idValue}`
+        `https://movie-recommendation-app-6rw6.onrender.com/movies/fetching-comments/${idValue}`
       )
       .then((res) =>setComments(res.data.comments))
       .catch((err) => console.log(err));
@@ -51,7 +51,7 @@ const Home = () => {
 
   const addLike=(idValue)=> {
     const token=localStorage.getItem('token')
-    axios.post(`https://yournextmovie.onrender.com/movies/add-like/${idValue}`,{},{headers:{Authorization:`Bearer ${token}`}}).then(res=>{
+    axios.post(`https://movie-recommendation-app-6rw6.onrender.com/movies/add-like/${idValue}`,{},{headers:{Authorization:`Bearer ${token}`}}).then(res=>{
         toast.success(res.data.msg+" refresh the page to see it")
     }).catch(err=>console.log(err))
   }
@@ -59,7 +59,7 @@ const Home = () => {
   const addComment=(e,idValue)=> {
     const token=localStorage.getItem('token')
     e.preventDefault()
-    axios.post(`https://yournextmovie.onrender.com/movies/add-comment/${idValue}`,{text:newComment},{headers:{Authorization:`Bearer ${token}`}}).then(res=>{
+    axios.post(`https://movie-recommendation-app-6rw6.onrender.com/movies/add-comment/${idValue}`,{text:newComment},{headers:{Authorization:`Bearer ${token}`}}).then(res=>{
         setComments(res.data.updatedComments)
         toast.success(res.data.msg)
     }).catch(err=>console.log(err))
@@ -97,7 +97,7 @@ const Home = () => {
                 <h5 className="mt-1 m-0">{eachMovie.title}</h5>
                 <div>
                   {[...Array(eachMovie.rating)].map((_, index) => (
-                    <img key={index} src={star} alt="star" width="26px" />
+                    <img key={index} src={star} alt="star" width="26px"/>
                   ))}
                 </div>
                 <p className="m-0">{eachMovie.description}</p>

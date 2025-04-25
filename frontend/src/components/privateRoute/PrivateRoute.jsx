@@ -6,7 +6,7 @@ const PrivateRoute=({children})=> {
     const [verification,setVerification]=useState({isLoading:true,isVerified:false})
     const fetchingProfile=()=> {
         const token=localStorage.getItem('token')
-        axios.get(`https://yournextmovie.onrender.com/auth/profile`,{headers:{Authorization:`Bearer ${token}`}}).then(res=>setVerification({isLoading:false,isVerified:true})).catch(err=>setVerification({isLoading:false,isVerified:false}))
+        axios.get(`https://movie-recommendation-app-6rw6.onrender.com/auth/profile`,{headers:{Authorization:`Bearer ${token}`}}).then(res=>setVerification({isLoading:false,isVerified:true})).catch(err=>setVerification({isLoading:false,isVerified:false}))
     }
 
     useEffect(()=> {

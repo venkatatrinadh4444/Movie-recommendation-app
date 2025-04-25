@@ -30,7 +30,7 @@ const AddMovie = () => {
     formData.append("description", movieData.description);
     const token = localStorage.getItem("token");
     axios
-      .post("https://yournextmovie.onrender.com/movies/add-movie", formData, {
+      .post("https://movie-recommendation-app-6rw6.onrender.com/movies/add-movie", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
           Authorization: `Bearer ${token}`,

@@ -13,13 +13,13 @@ const Profile = () => {
   const [fetchedMovies,setFetchedMovies]=useState([])
   const fetchingRecommendations=()=> {
     const token=localStorage.getItem('token')
-    axios.get('https://yournextmovie.onrender.com/movies/your-recommendations',{headers:{Authorization:`Bearer ${token}`}}).then(res=>setFetchedMovies(res.data.
+    axios.get('https://movie-recommendation-app-6rw6.onrender.com/movies/your-recommendations',{headers:{Authorization:`Bearer ${token}`}}).then(res=>setFetchedMovies(res.data.
       yourRecommendedMovies)).catch(err=>console.log(err))
   }
 
   const fetchingProfileDetails=()=> {
     const token=localStorage.getItem('token')
-    axios.get(`https://yournextmovie.onrender.com/auth/profile`,{headers:{Authorization:`Bearer ${token}`}}).then(res=>setUserProfile(res.data.exist)).catch(err=>console.log(err))
+    axios.get(`https://movie-recommendation-app-6rw6.onrender.com/auth/profile`,{headers:{Authorization:`Bearer ${token}`}}).then(res=>setUserProfile(res.data.exist)).catch(err=>console.log(err))
   }
 
   useEffect(()=> {
@@ -29,7 +29,7 @@ const Profile = () => {
 
   const deleteMovie=(idValue)=> {
     const token=localStorage.getItem('token')
-    axios.delete(`https://yournextmovie.onrender.com/movies/delete-your-recommendation/${idValue}`,{headers:{Authorization:`Bearer ${token}`}}).then(res=>{
+    axios.delete(`https://movie-recommendation-app-6rw6.onrender.com/movies/delete-your-recommendation/${idValue}`,{headers:{Authorization:`Bearer ${token}`}}).then(res=>{
       setFetchedMovies(res.data.updatedMovies)
       toast.success(res.data.msg)
     }).catch(err=>toast.error(res.data.msg))
